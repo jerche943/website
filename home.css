@@ -1,0 +1,30 @@
+    .home-section {
+        position: relative;
+        min-height: 200px; /* ensures it fits one screen height */
+        overflow: hidden;
+    }
+
+    .home-section__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* full height of section */
+        background-image: url('background.jpg');
+        background-size: cover; /* maintain aspect ratio, cover area */
+        background-position: 40% 23%;
+        background-repeat: no-repeat;
+        z-index: -1; /* behind the content */
+    }
+
+    .home-section__overlay {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+        text-align: center;
+        color: white;
+    }

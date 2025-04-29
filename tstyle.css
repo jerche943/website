@@ -1,0 +1,70 @@
+
+    
+
+    .testimonials-wrap {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .t-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* THIS handles responsive stacking */
+        gap: 20px;
+        max-width: 2200px;
+        margin: 0 auto;
+        justify-items: center;
+    }
+    
+    .testimonials__item {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* Keeps image area square without fixed px */
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+        /* Responsive image sizing */
+
+    .testimonials__item img {
+        width: 220px; /*  SHRINK THIS VALUE to control logo size */
+        height: auto; /*  Keeps aspect ratio */
+        object-fit: contain; /* ensures entire logo fits */
+        display: block;
+        margin: 0 auto; /*  CENTERS THE IMAGE */
+        transition: transform 0.4s ease;
+    }
+
+        /*
+    .testimonials__item img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+        display: block;
+    }
+    */
+
+    .testimonials__item:hover img {
+        transform: scale(1.05);
+    }
+
+    .testimonials__item figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 15px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .testimonials__item:hover figcaption {
+        opacity: 1;
+    }
+
