@@ -1,0 +1,83 @@
+    .nav-grid-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; /* align logo and menu vertically */
+        padding: 20px;
+        max-width: 2200px;
+        margin: 0;
+    }
+
+    /* ADDED: colorful gradient background and subtle shadow */
+    .main-header {
+        background: linear-gradient(to right, #0077cc, #00b4d8); /*  CHANGED */
+        padding: 0.5rem 2rem; /*  ADDED */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /*  ADDED */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .nav-column {
+        display: flex;
+        flex-direction: row; /* horizontal layout */
+        align-items: center;
+        gap: 2rem; /* space between logo and menu */
+        width: 100%;
+    }
+
+    .second-nav__logo__item {
+        margin: 0;
+        padding: 0;
+        width: 60px; /* smaller, sleeker for a header */
+        aspect-ratio: 1 / 1;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        background: white; /*  ADDED: background behind logo for contrast */
+        padding: 5px; /*  ADDED */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2); /*  CHANGED */
+    }
+
+    .second-nav__logo__item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .menu {
+        flex: 1;
+    }
+
+    .menu ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    /*  CHANGED: turned links into colorful, pill-shaped tabs */
+    .menu a {
+        text-decoration: none;
+        color: white; /*  CHANGED */
+        font-weight: 600; /*  CHANGED */
+        padding: 0.6rem 1.2rem; /*  CHANGED */
+        border-radius: 5px; /*  CHANGED */
+        background-color: rgba(255, 255, 255, 0.15); /*  ADDED */
+        transition: transform 0.3s ease-in-out; /*  CHANGED */
+    }
+
+    /*  CHANGED: hover and active state */
+    .menu a:hover,
+    .menu a.is-selected {
+        background-color: white; /*  CHANGED */
+        color: #0077cc; /*  CHANGED */
+        transform: translateY(-2px); /*  ADDED */
+    }
