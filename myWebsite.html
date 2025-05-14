@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="jstyle.css">
 
 
+
     <link id="dynamic-favicon" rel="icon" type="image" href="eye3.ico">
 
     <link rel="apple-touch-icon" href="static/images/favicons/apple-touch-icon.png">
@@ -25,59 +26,67 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="tstyle.css">
-    <link rel="stylesheet" href="contact-card.css">
+    <!--<link rel="stylesheet" href="https://jerche943.github.io/website/mainlogo.css">-->
     <link rel="stylesheet" href="mainlogo.css">
     <link rel="stylesheet" href="home.css">
-    <script src="static/js/head.min.js"></script>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="updated_stylesheets/updated_interests.css">
+    <link rel="stylesheet" href="updated_stylesheets/updated_contact-card.css">
+    <link rel="stylesheet" href="updated_stylesheets/updated_advantages.css">
+    <link rel="stylesheet" href="updated_stylesheets/updated_contact-advantages.css">
+    <link rel="stylesheet" href="updated_stylesheets/updated_footer.css">
+
+
+    <!--<script src="static/js/head.min.js"></script>-->
 </head>
 
-    <body>
+<body>
 
 
-        <script>
-            const faviconImages = [
-                "eye1.ico",
-                "eye2.ico",
-                "eye3.ico",
-                "eye4.ico",
-                "eye.ico"
-            ];
+    <script>
+        const faviconImages = [
+            "eye1.ico",
+            "eye2.ico",
+            "eye3.ico",
+            "eye4.ico",
+            "eye.ico"
+        ];
 
-            let currentIconIndex = 0;
+        let currentIconIndex = 0;
 
-            function changeFavicon() {
-                const favicon = document.getElementById('dynamic-favicon');
-                favicon.href = faviconImages[currentIconIndex];
-                currentIconIndex = (currentIconIndex + 1) % faviconImages.length;
-            }
+        function changeFavicon() {
+            const favicon = document.getElementById('dynamic-favicon');
+            favicon.href = faviconImages[currentIconIndex];
+            currentIconIndex = (currentIconIndex + 1) % faviconImages.length;
+        }
 
-            setInterval(changeFavicon, 500); // Change favicon every 1000 milliseconds (1 second)
-        </script>
-
-        <script>
+        setInterval(changeFavicon, 500); // Change favicon every 1000 milliseconds (1 second)
+    </script>
+    <!--
+    <script>
         progressJs().setOptions({ overlayMode: true, theme: 'custom' }).start();
 
-            if (window.attachEvent) {
-                window.attachEvent('onload', function () { progressJs().end(); });
+        if (window.attachEvent) {
+            window.attachEvent('onload', function () { progressJs().end(); });
+        }
+        else {
+            if (window.onload) {
+                var curronload = window.onload;
+                var newonload = function () {
+                    curronload();
+                    progressJs().end();
+                };
+                window.onload = newonload;
             }
             else {
-                if (window.onload) {
-                    var curronload = window.onload;
-                    var newonload = function () {
-                        curronload();
-                        progressJs().end();
-                    };
-                    window.onload = newonload;
-                }
-                else {
-                    window.onload = function () {
-                        progressJs().end();
-                    };
-                }
+                window.onload = function () {
+                    progressJs().end();
+                };
             }
-        </script>
-
-        <!-- Header-->
+        }
+    </script>
+    -->
+    <!-- Header-->
     <header class="main-header">
 
         <div class="nav-grid-container">
@@ -86,7 +95,7 @@
                 <figure class="second-nav__logo__item">
                     <!--put an icon instead of -->
 
-                    <img src="j.png">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/j.png">
 
                 </figure>
 
@@ -94,7 +103,7 @@
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a class="js-link js-anchor is-selected" href="#home">
+                            <a class="js-link js-anchor" href="#home">
                                 Home
                             </a>
                         </li>
@@ -140,7 +149,7 @@
 
     <section class="home-section" id="home">
         <div class="home-section__bg">
-            
+
 
         </div>
 
@@ -175,7 +184,7 @@
 
                     <h4>
                         I am based in Southern California with interests in Machine Learning, Robotics and Mathematics and I have a love for philosphy and comedy.
-                        I can communicate conversationally in English and Mandarin. Other hobbies include impressions and pickleball! I love gaming and anjoy learning about anything new.
+                        I can communicate conversationally in English and Mandarin. Other hobbies include impressions and pickleball! I love gaming and enjoy learning about anything new.
                     </h4>
 
                 </header>
@@ -227,95 +236,53 @@
 
     <!-- Services section-->
 
-    <section class="common-section" id="services">
-        <div class="container">
+    <section class="interests-common-section" id="services">
+        <div class="interests-container">
 
-            <header class="common-section__header">
+            <header class="interests-section__header">
                 <h2>
                     Some of my Interests
                 </h2>
 
             </header>
 
-            <div class="grid-container">
-                <ul class="services services_advisory">
 
 
+            <div class="interests-grid-container">
 
-                    <li class="services__item icon icon_research">
-                        <h4>
-                            Computer Gaming
-                        </h4>
-                        <p>
-                            I coded classic games such as battleship, chess, and 2048 to name a few.
+                <div class="services__item icon icon_research">
+                    <h4>Computer Gaming</h4>
+                    <p>I coded classic games such as battleship, chess, and 2048 to name a few.</p>
+                </div>
 
-                        </p>
-                    </li>
+                <div class="services__item icon icon_strategy">
+                    <h4>Languages</h4>
+                    <p>I have the most practice in Java. I’m learning ASL and Morse code alongside Mandarin and English.</p>
+                </div>
 
-                    <li class="services__item icon icon_strategy">
-                        <h4>
-                            Languages
-                        </h4>
-                        <p>
-                            I have the most Practice in Java. As far as world languages go I have conversationaly skills in
-                            Mandarin and English, but I am trying to learn ASL and Morse Code
-                        </p>
-                    </li>
-                </ul>
+                <div class="services__item icon icon_support">
+                    <h4>Community Service</h4>
+                    <p>I joined Circle K in college to serve others and build friendships while volunteering.</p>
+                </div>
 
-                <ul class="services services_pm">
-                    <li class="services__item icon icon_support">
-                        <h4>
-                            Community Service
-                        </h4>
+                <div class="services__item icon icon_plan">
+                    <h4>Mathematics</h4>
+                    <p>I love solving puzzles from calculus to cryptography — even if I don’t keep up with all of it.</p>
+                </div>
 
-                        <p>
-                            I joined Circle K in college due to my passion for community service where I helped those in need while making lifelong friends along the way.
-
-                        </p>
-                    </li>
-
-                    <li class="services__item icon icon_plan">
-
-                        <h4>
-                            Mathematics
-                        </h4>
-
-                        <p>
-                            Some of the most fun I've had involved mathematics, from calculus to combinatorics, while I don't keep up with them all as much as I used to,
-                            I enjoy learning and solving mathematical puzzles and breaking cryptographic codes whenever I can.
-                        </p>
-                    </li>
-
-
-                </ul>
-
-                <ul class="services services_ex">
-                    <li class="services__item icon icon_support">
-                        <h4>
-                            Exercise
-                        </h4>
-
-                        <p>
-                            I try to keep my body active and I love pushing myself through the frustration and pain to see how far I can go.
-
-                        </p>
-                    </li>
-
-                </ul>
-
-
-
+                <div class="services__item icon icon_support">
+                    <h4>Exercise</h4>
+                    <p>I stay active and challenge myself physically to grow stronger.</p>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <section class="common-section" id="projects">
+    <section class="projects-common-section" id="projects">
 
 
-
-        <header class="common-section__header">
+        <header class="projects-section__header">
             <h2>
                 Pictures and Projects
             </h2>
@@ -327,9 +294,9 @@
 
         <div class="projects-wrap">
             <div class="grid-container">
-                
+
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/coworkers.jpg">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/coworkers.jpg">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             Eating lunch with the coolest coworkers
@@ -339,7 +306,7 @@
                 </figure>
 
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/sil_gui.jpg">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/sil_gui.jpg">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             One of my projects while working in L3Harris, coding and designing a GUI that allows the user to run tests in the simulated GPS environement
@@ -348,7 +315,7 @@
                 </figure>
 
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/cleanup.JPG">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/cleanup.JPG">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             A picture with me and Circle K club members getting ready for a park cleanup event I hosted.
@@ -357,7 +324,7 @@
                 </figure>
 
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/games.JPG">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/games.jpg">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             Checking out the indie games section at the Museum of Pop in Seattle.
@@ -366,7 +333,7 @@
                 </figure>
 
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/aiding.jpg">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/aiding.jpg">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             A python script I wrote for work that generates aiding data to support the trajectory for our chips.
@@ -375,7 +342,7 @@
                 </figure>
 
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/cipher.jpg">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/cipher.jpg">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             One of my python projects that encrypts the message using a Caeser cipher.
@@ -384,7 +351,7 @@
                 </figure>
 
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/marathon.jpg">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/marathon.JPG">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             Me finishing my first half marathon!
@@ -393,7 +360,7 @@
                 </figure>
 
                 <figure class="projects__item">
-                    <img src="https://github.com/jerche943/website/blob/main/Japan.jpg">
+                    <img src="https://raw.githubusercontent.com/jerche943/website/main/Japan.JPG">
                     <figcaption>
                         <a class="icon icon_link" href="#" rel="nofollow">
                             Spending time with the bestie in Nara, Japan!
@@ -402,222 +369,245 @@
                 </figure>
 
 
-                
+
             </div>
         </div>
 
-      
+
     </section>
 
 
     <!-- Affiliations section-->
-    <section class="common-section" id="testimonials">
-        <div class="container">
-            <header class="common-section__header">
-                <h2>
-                    Affiliations
-                </h2>
-                <p>
-                    Work/Organizations
-                </p>
-            </header>
+    <section class="t-common-section" id="testimonials">
 
-            <div class="t-grid-container">
-                
-
-                <li class="testimonials__item">
-                    <img src="https://github.com/jerche943/website/blob/main/cda.png">
-                    <blockquote>
-                        <p class="icon icon_ql">
-                            Researcher who ensured drawings were up to county code and created scripts to assist in organization
-                        </p>
-                        <cite>
-                            <span class="name">
-                                Administrative Assistant, Programmer,
-                            </span>
-                            <span class="role">
-                                Creative Design Associates
-                            </span>
-                        </cite>
-                    </blockquote>
-                </li>
-                <li class="testimonials__item">
-                    <img src="https://github.com/jerche943/website/blob/main/perks.png">
-                    <blockquote>
-                        <p class="icon icon_ql">
-                            Website Marketplace Development Platform
-                        </p>
-                        <cite>
-                            <span class="name">
-                                Marketplace Full Stack Intern, Programmer,
-                            </span>
-                            <span class="role">
-                                PERKS
-                            </span>
-                        </cite>
-                    </blockquote>
-                </li>
-
-                <li class="testimonials__item">
-                    <img src="https://github.com/jerche943/website/blob/main/ucsd.png">
-                    <blockquote>
-                        <p class="icon icon_ql">
-                            Leading and coordinating events for Circle K
-                        </p>
-                        <cite>
-                            <span class="name">
-                                Fam Head,
-                            </span>
-                            <span class="role">
-                                UC San Diego
-                            </span>
-                        </cite>
-                    </blockquote>
-                </li>
-                <li class="testimonials__item">
-                    <img src="https://github.com/jerche943/website/blob/main/l3.png">
-                    <blockquote>
-                        <p class="icon icon_ql">
-                            Created new builds and scripts as well as aided hardware in the loop testing to ensure quality and effectiveness for new products
-                        </p>
-                        <cite>
-                            <span class="name">
-                                Senior Associate Engineer, HWIL tester, programmer,
-                            </span>
-                            <span class="role">
-                                L3Harris Technologies
-                            </span>
-                        </cite>
-                    </blockquote>
-                </li>
-
-                
-
+        <header class="t-common-section__header">
+            <div class="header-box">
+                <h2>Affiliations</h2>
+                <p>Work/Organizations</p>
             </div>
+        </header>
+
+
+        <div class="t-grid-container">
+            <br>
+
+            <li class="testimonials__item">
+                <img src="https://raw.githubusercontent.com/jerche943/website/main/cda.png">
+                <blockquote>
+                    <p class="icon icon_ql">
+                        Researcher who ensured drawings were up to county code and created scripts to assist in organization
+                    </p>
+                    <cite>
+                        <span class="name">
+                            Administrative Assistant, Programmer,
+                        </span>
+                        <span class="role">
+                            Creative Design Associates
+                        </span>
+                    </cite>
+                </blockquote>
+            </li>
+            <li class="testimonials__item">
+                <img src="https://raw.githubusercontent.com/jerche943/website/main/perks.png">
+                <blockquote>
+                    <p class="icon icon_ql">
+                        Website Marketplace Development Platform
+                    </p>
+                    <cite>
+                        <span class="name">
+                            Marketplace Full Stack Intern, Programmer,
+                        </span>
+                        <span class="role">
+                            PERKS
+                        </span>
+                    </cite>
+                </blockquote>
+            </li>
+
+            <li class="testimonials__item">
+                <img src="https://raw.githubusercontent.com/jerche943/website/main/ucsd.png">
+                <blockquote>
+                    <p class="icon icon_ql">
+                        Leading and coordinating events for Circle K
+                    </p>
+                    <cite>
+                        <span class="name">
+                            Fam Head,
+                        </span>
+                        <span class="role">
+                            UC San Diego
+                        </span>
+                    </cite>
+                </blockquote>
+            </li>
+            <li class="testimonials__item">
+                <img src="https://raw.githubusercontent.com/jerche943/website/main/l3.png">
+                <blockquote>
+                    <p class="icon icon_ql">
+                        Created new builds and scripts as well as aided hardware in the loop testing to ensure quality and effectiveness for new products
+                    </p>
+                    <cite>
+                        <span class="name">
+                            Senior Associate Engineer, HWIL tester, programmer,
+                        </span>
+                        <span class="role">
+                            L3Harris Technologies
+                        </span>
+                    </cite>
+                </blockquote>
+            </li>
+
+
+
         </div>
+
     </section>
 
-    <!-- Contacts section-->
-
-    <div class="contacts-section" id="contacts">
-        <div class="container">
-
+    <!-- Contacts and Advantages Section -->
+    <div class="contact-advantages-container">
+        <div class="contacts-section" id="contacts">
             <header class="contact-card__header">
-
-                <h2>
-                    Contact Info
-                </h2>
-
-                <h4>
-                    Social Media
-                </h4>
+                <h2>Contact Info</h2>
+                <h4>Social Media</h4>
             </header>
+            <br>
 
             <div class="contact-info">
-
                 <div class="contact-info__logo">
-                    <img src="https://github.com/jerche943/website/blob/main/friends.jpg">
+                    <img id="contactImg" src="https://raw.githubusercontent.com/jerche943/website/main/friends.jpg">
                 </div>
 
                 <div class="contact-info__group">
-                    <div class="contact-info__additional">
-
-                    </div>
+                    <div class="contact-info__additional"></div>
                     <div class="contact-info__vcard vcard">
-                        <h4 class="fn org">
-                            Jeremy Chen
-                        </h4>
-                        <p class="role title">
-                            Bachelor of Science
-                        </p>
-                        <br>
-                        <br>
+                        <h4 class="fn org">Jeremy Chen</h4>
+                        <p class="role title">Bachelor of Science</p>
+                        <br><br>
                         <p class="fa fa-location-arrow">
                             <a class="adr js-anchor" href="#gmap">
-                                <span class="country-name">
-                                    United States
-                                </span>,&nbsp;
-
-                                <span class="locality">
-
-                                    California
-                                </span>
+                                <span class="country-name">United States</span>,&nbsp;
+                                <span class="locality">California</span>
                             </a>
                         </p>
-                        <br>
-                        <br>
+                        <br><br>
                         <p class="fa fa-envelope">
-
-                            <a class="email" href="mailto:jerchen6@gmail.com">
-                                jerchen6@gmail.com
-                            </a>
+                            <a class="email" href="mailto:jerchen6@gmail.com">jerchen6@gmail.com</a>
                         </p>
                     </div>
 
                     <ul class="contact-info__social">
-
-                        
-                           <a href="https://github.com/jerche943"> <i class="fa fa-github fa-2x"></i></a>
-                           <a href="https://www.linkedin.com/in/jeremy-chen-961181216"> <i class="fa fa-linkedin-square fa-2x"></i></a>
-                           <a href="https://stackoverflow.com/users/20897077/cj447"> <i class="fa fa-stack-exchange fa-2x"></i></a>
-
-
+                        <a href="https://github.com/jerche943"><i class="fa fa-github fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/jeremy-chen-961181216"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                        <a href="https://stackoverflow.com/users/20897077/cj447"><i class="fa fa-stack-exchange fa-2x"></i></a>
                     </ul>
                 </div>
             </div>
-
-
         </div>
 
-
-        <div class="gmap" id="gmap">
-
-            <pre>
-
-
-
-
-
-
-
-</pre>
-
-            <blockquote class="advantages">
-                <h2>
-                    Buy me a coffee!
-                </h2>
-
-                <blockquote>
-
-                    <img src="static\images\projects\wall\ca.jpg" width="70px">
-
-                </blockquote>
+        <div class="advantages-section" id="advantages">
+            <header class="contact-card__header">
+                <h2>Thanks for scrolling!</h2>
+                <h4>Wishing you the best!</h4>
+            </header>
+            <br>
+            <blockquote class="advantages__item">
+                <img id="advantageImg" src="me.JPG" alt="Image">
             </blockquote>
         </div>
-
-
-        <!-- Footer-->
-        <footer class="main-footer">
-            <div class="container">
-
-                <a class="main-footer__gotop icon icon_gotop js-anchor" href="#home">
-                    To top!
-                </a>
-
-                <p class="main-footer__links">
-                    Made By&nbsp;<a href="https://www.linkedin.com/in/jeremy-chen-961181216">
-
-                        Jeremy Chen
-                    </a>
-                </p>
-            </div>
-        </footer>
-
-        <script src="static/js/body.min.js">
-
-        </script>
-
     </div>
-    </body>
+
+    <!-- Footer-->
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <a class="main-footer__gotop icon_gotop js-anchor" href="#home">
+                To top!
+            </a>
+
+
+            <p class="main-footer__links">
+                Made By&nbsp;<a href="https://www.linkedin.com/in/jeremy-chen-961181216">
+
+                    Jeremy Chen
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!--
+    <script src="static/js/body.min.js">
+    </script>
+    -->
+
+    <script>
+
+        /*
+        window.addEventListener("DOMContentLoaded", function () {
+            const contactImg = document.getElementById("contactImg");
+            const advantageImg = document.getElementById("advantageImg");
+
+            // Ensure both images are loaded before attempting to adjust
+            if (!contactImg || !advantageImg) {
+                console.warn("One or both image elements not found.");
+                return;
+            }
+
+            // Get the position of the contact image
+            const contactPos = findPos(contactImg);
+            console.log("Contact Position X:", contactPos.X, "Y:", contactPos.Y);
+
+            // Calculate the mirrored position for the advantage image
+            const mirroredLeft = window.innerWidth - contactPos.X - contactImg.offsetWidth;
+
+            // Update the position of the advantage image
+            advantageImg.style.left = `${mirroredLeft}px`;
+            advantageImg.style.top = `${contactPos.Y}px`;
+
+            // Update image dimensions to match the contact image
+            advantageImg.style.width = `${contactImg.offsetWidth}px`;
+            advantageImg.style.height = `${contactImg.offsetHeight}px`;
+        });
+        */
+
+
+        //top left position and show size of webpage
+        /*
+        function findPos(obj) {
+            let curleft = 0, curtop = 0;
+            if (obj.offsetParent) {
+                do {
+                    curleft += obj.offsetLeft;
+                    curtop += obj.offsetTop;
+                } while (obj = obj.offsetParent);
+            }
+            return { X: curleft, Y: curtop };
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const contactImg = document.getElementById("contactImg");
+            const advantageImg = document.getElementById("advantageImg");
+
+            if (!contactImg || !advantageImg) {
+                console.warn("One or both image elements not found.");
+                return;
+            }
+
+            const contactPos = findPos(contactImg);
+            console.log("Contact Position X:", contactPos.X);
+            console.log("Contact Position Y:", contactPos.Y);
+
+            console.log("Viewport Width:", window.innerWidth);
+            console.log("Viewport Height:", window.innerHeight);
+
+            console.log("Full Page Width:", document.body.scrollWidth);
+            console.log("Full Page Height:", document.body.scrollHeight);
+
+        });
+        */
+    </script>
+
+
+
+</body>
 </html>
-</html>
+

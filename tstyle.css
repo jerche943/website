@@ -6,9 +6,45 @@
         display: flex;
         justify-content: center;
     }
-    
+
+    .t-common-section {
+        padding: 80px 20px;
+
+    }
+
+    /* Section Header */
+    .t-common-section__header {
+        text-align: center; /* Align header text to the left */
+        position: relative;
+        top: 250px;
+        margin-bottom: 40px; /* Add space below the header */
+        margin-left: 10px;
+        padding: 5px; /*  ADDED */
+        width: 500px;
+
+    }
+
+    .header-box {
+        display: inline-block; /* Shrinks to fit content */
+        padding: 8px 16px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        background-color: #00ffff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .t-common-section__header h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        color: #2c3e50;
+        margin: 0 0 20px 0; /* top | right | bottom | left */
+        padding: 0; /* remove left padding */
+    }
+
     .t-grid-container {
+        text-align: center;
         display: grid;
+        transform: translateX(-125px); /* Try negative or positive values */
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* THIS handles responsive stacking */
         gap: 20px;
         max-width: 2200px;
@@ -28,12 +64,11 @@
         /* Responsive image sizing */
 
     .testimonials__item img {
-        width: 220px; /*  SHRINK THIS VALUE to control logo size */
-        height: auto; /*  Keeps aspect ratio */
-        object-fit: contain; /* ensures entire logo fits */
+        height: 220px;
+        width: auto;
+        object-fit: contain;
         display: block;
-        margin: 0 auto; /*  CENTERS THE IMAGE */
-        transition: transform 0.4s ease;
+        margin: 0 auto;
     }
 
         /*

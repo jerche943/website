@@ -1,0 +1,103 @@
+﻿    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Section styling */
+    .interests-common-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    }
+
+    /* Section Header */
+    .interests-section__header {
+        text-align: left; /* Align header text to the left */
+        margin-bottom: 40px; /* Add space below the header */
+        padding: 0 20px; /* Padding to ensure space on the sides */
+    }
+
+    .interests-section__header h2 {
+        font-size: 2.5rem; /* Adjust size */
+        line-height: 1.2;
+        color: #2c3e50;
+        margin-left: 40px; /* Move the title to the left */
+        margin-bottom: 40px; /* Space below title */
+        max-width: none; /* Remove max-width restriction */
+        padding-left: 40px; /* Slight padding to move left */
+    }
+
+    /* Container */
+    .interests-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px; /* Add padding to the sides */
+    }
+
+    /* Grid layout for all service items */
+    .interests-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto; /* centers the grid */
+        padding: 0 20px;
+    }
+
+    /* Service card */
+    .services__item {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .services__item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .services__item h4 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        color: #1a1a1a;
+    }
+
+    .services__item p {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 5px;
+    }
+
+    /* Icon placeholder classes */
+    .icon::before {
+        content: '★';
+        display: inline-block;
+        font-size: 1.2rem;
+        color: #3498db;
+        margin-right: 8px;
+    }
+
+    .icon_research::before {
+        content: '🕹️';
+    }
+
+    .icon_strategy::before {
+        content: '🌐';
+    }
+
+    .icon_support::before {
+        content: '🤝';
+    }
+
+    .icon_plan::before {
+        content: '📊';
+    }

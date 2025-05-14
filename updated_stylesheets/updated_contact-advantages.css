@@ -1,0 +1,71 @@
+﻿
+
+    /* Main container: side-by-side layout */
+    .contact-advantages-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* align tops of contact and advantage sections */
+        padding: 60px 20px;
+        background: linear-gradient(to right, #af5fb0, #00b4d8);
+        gap: 80px;
+    }
+
+    .contacts-section,
+    .advantages-section {
+        flex: 1;
+        padding: 20px;
+        min-width: 300px;
+        display: flex; /* MODIFIED: ensure both sections use flex */
+        flex-direction: column;
+        align-items: center; /* MODIFIED: center horizontally */
+        justify-content: center; /* MODIFIED: center vertically */
+    }
+
+    /* Arrange the image and info side by side in the contacts section */
+    .contact-info {
+        display: flex;
+        flex-direction: row; /* MODIFIED: enforce horizontal layout */
+        align-items: flex-start;
+        flex-wrap: nowrap; /* ADDED: prevent wrapping */
+    }
+
+    .contact-info__logo {
+        flex-shrink: 0;
+    }
+
+    /* Moves the vcard and links a bit to the right of the image */
+    .contact-info__group {
+        margin-left: 20px;
+    }
+
+    /* Ensure consistent header style across both sections */
+    .contact-card__header {
+        background-color: #3498db;
+        padding: 12px 24px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .contact-card__header h2 {
+        margin: 0;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .contact-card__header h4 {
+        margin: 5px 0 0;
+        font-size: 0.85em;
+        color: #ffffff;
+    }
+
+    .contact-advantages-container {
+        background: linear-gradient(to right, #2c3e50, #3498db);
+    }
+
+    .contacts-section,
+    .advantages-section {
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }

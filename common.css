@@ -1,0 +1,43 @@
+﻿    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; /* align logo and menu vertically */
+        padding: 20px;
+        max-width: 2200px;
+        margin: 0;
+    }
+
+    /* ADDED: colorful gradient background and subtle shadow */
+    .common-section {
+        background: linear-gradient(to right, #af5fb0, #00b4d8); /*  CHANGED */
+        padding: 0.5rem 2rem; /*  ADDED */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /*  ADDED */
+        top: 0;
+        z-index: 1000;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .about-skills {
+        display: flex;
+        flex-direction: row; /* horizontal layout */
+        align-items: center;
+        gap: 2rem; /* space between logo and menu */
+        width: 100%;
+    }
+
+    .common-section__header {
+        margin: 0;
+        padding: 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        background: white; /*  ADDED: background behind logo for contrast */
+        padding: 5px; /*  ADDED */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2); /*  CHANGED */
+    }
+
+    .common-section__header img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }

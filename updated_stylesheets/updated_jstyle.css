@@ -1,0 +1,102 @@
+﻿    .projects-wrap {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .projects-common-section {
+        padding: 80px 20px;
+        background-image: url('night.jpg');
+    }
+
+        /* Section Header */
+    .projects-section__header {
+        text-align: center; /* Align header text to the left */
+        margin-bottom: 40px; /* Add space below the header */
+        border-radius: 10px;
+        background: #b6ff00; /*  ADDED: background behind logo for contrast */
+        padding: 5px; /*  ADDED */
+        box-shadow: 0 2px 0px rgba(0,0,0,0.2); /*  CHANGED */
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .projects-section__header h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        color: #2c3e50;
+        margin: 0 0 20px 0; /* top | right | bottom | left */
+        padding: 0; /* remove left padding */
+    }
+
+    /* This makes images flow into rows that wrap naturally */
+    .grid-container {
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* THIS handles responsive stacking */
+        gap: 20px;
+        max-width: 2200px;
+        margin: 0 auto;
+    }
+
+    /* This allows items to scale within the grid cells */
+    .projects__item {
+        width: 100%;
+        aspect-ratio: 1 / 1; /* Keeps image area square without fixed px */
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive image sizing */
+    .projects__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+        display: block;
+    }
+
+    .projects__item:hover img {
+        transform: scale(1.05);
+    }
+
+    .projects__item figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 15px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .projects__item:hover figcaption {
+        opacity: 1;
+    }
+
+    .icon_link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .icon_link:hover {
+        text-decoration: underline;
+    }
+
+
+
+
+.projects-common-section {
+    background: linear-gradient(to bottom, #1a1a1a, #2c3e50);
+}
+
+.projects__item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}

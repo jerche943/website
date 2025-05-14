@@ -1,0 +1,43 @@
+﻿    .advantages__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* MODIFIED */
+        width: 100%;
+        margin: 0 0 20px 0; /* MODIFIED: remove top margin */
+        padding: 5px;
+        text-align: center; /* MODIFIED: centered text */
+    }
+
+    .advantages__header h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        color: #2c3e50;
+        margin: 0;
+        padding: 0;
+    }
+
+    .advantages__item {
+        display: flex;
+        justify-content: center; /* MODIFIED */
+        align-items: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        max-width: 535px; /* MODIFIED: to mirror contact image */
+    }
+
+    .advantages__item img {
+        width: 100%;
+        height: auto;
+        max-width: 535px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+    }
+
+    .advantages__item:hover img {
+        transform: scale(1.05);
+    }
