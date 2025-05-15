@@ -16,13 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://jerche943.github.io/website/jstyle.css">
 
-
-
-    <link id="dynamic-favicon" rel="icon" type="image" href="eye3.ico">
-
-    <link rel="apple-touch-icon" href="static/images/favicons/apple-touch-icon.png">
-
-    <link rel="apple-touch-icon-precomposed" href="static/images/favicons/apple-touch-icon-precomposed.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://jerche943.github.io/website/tstyle.css">
@@ -41,26 +34,6 @@
 
 <body>
 
-
-    <script>
-        const faviconImages = [
-            "eye1.ico",
-            "eye2.ico",
-            "eye3.ico",
-            "eye4.ico",
-            "eye.ico"
-        ];
-
-        let currentIconIndex = 0;
-
-        function changeFavicon() {
-            const favicon = document.getElementById('dynamic-favicon');
-            favicon.href = faviconImages[currentIconIndex];
-            currentIconIndex = (currentIconIndex + 1) % faviconImages.length;
-        }
-
-        setInterval(changeFavicon, 500); // Change favicon every 1000 milliseconds (1 second)
-    </script>
     <!--
     <script>
         progressJs().setOptions({ overlayMode: true, theme: 'custom' }).start();
